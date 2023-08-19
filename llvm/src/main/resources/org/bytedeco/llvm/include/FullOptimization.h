@@ -75,20 +75,20 @@ LLVMErrorRef optimizeModule(
     fnPasses.add(createTargetTransformInfoWrapperPass(machine->getTargetIRAnalysis()));
 
     // AddOptimizationPasses
-    PassManagerBuilder builder1;
-    builder1.OptLevel = optLevel;
-    builder1.SizeLevel = sizeLevel;
-    builder1.Inliner = createFunctionInliningPass(optLevel, sizeLevel, false);
-    builder1.LoopVectorize = optLevel > 1 && sizeLevel < 2;
-    builder1.SLPVectorize = optLevel > 1 && sizeLevel < 2;
+//    PassManagerBuilder builder1;
+//    builder1.OptLevel = optLevel;
+//    builder1.SizeLevel = sizeLevel;
+//    builder1.Inliner = createFunctionInliningPass(optLevel, sizeLevel, false);
+//    builder1.LoopVectorize = optLevel > 1 && sizeLevel < 2;
+//    builder1.SLPVectorize = optLevel > 1 && sizeLevel < 2;
 //    machine->adjustPassManager(builder1);
-    builder1.populateFunctionPassManager(fnPasses);
-    builder1.populateModulePassManager(passes);
+//    builder1.populateFunctionPassManager(fnPasses);
+//    builder1.populateModulePassManager(passes);
 
     // AddStandardLinkPasses
-    PassManagerBuilder builder2;
-    builder2.VerifyInput = true;
-    builder2.Inliner = createFunctionInliningPass();
+//    PassManagerBuilder builder2;
+//    builder2.VerifyInput = true;
+//    builder2.Inliner = createFunctionInliningPass();
 //    builder2.populateLTOPassManager(passes);
 
     fnPasses.doInitialization();

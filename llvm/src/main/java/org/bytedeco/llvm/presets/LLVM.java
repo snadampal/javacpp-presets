@@ -32,13 +32,13 @@ import org.bytedeco.javacpp.tools.*;
 @Properties(inherit = javacpp.class, target = "org.bytedeco.llvm.LLVM", global = "org.bytedeco.llvm.global.LLVM", value = {@Platform(
     value = {"linux", "macosx", "windows"}, define = {"__STDC_LIMIT_MACROS", "__STDC_CONSTANT_MACROS"},
     include = {"<llvm-c/DataTypes.h>", "<llvm-c/Types.h>", "<llvm-c/Support.h>", "<llvm-c/Core.h>", "<llvm-c/Analysis.h>", "<llvm-c/BitReader.h>", "<llvm-c/BitWriter.h>",
-               "<llvm-c/DisassemblerTypes.h>", "<llvm-c/Disassembler.h>", "<llvm-c/Initialization.h>", "<llvm-c/IRReader.h>", "<llvm-c/Linker.h>",
+               "<llvm-c/DisassemblerTypes.h>", "<llvm-c/Disassembler.h>", /* "<llvm-c/Initialization.h>",*/ "<llvm-c/IRReader.h>", "<llvm-c/Linker.h>",
                "<llvm-c/lto.h>", "<llvm-c/Object.h>", "<llvm-c/Target.h>", "<llvm-c/TargetMachine.h>", "<llvm-c/ExecutionEngine.h>",
                "<llvm-c/Comdat.h>", "<llvm-c/DebugInfo.h>", "<llvm-c/Error.h>", "<llvm-c/ErrorHandling.h>", "<llvm-c/Orc.h>", "<llvm-c/Remarks.h>",
-               "<llvm-c/OrcEE.h>", "<llvm-c/LLJIT.h>", /*"<llvm-c/Transforms/AggressiveInstCombine.h>", "<llvm-c/Transforms/Coroutines.h>",*/ "<llvm-c/Transforms/InstCombine.h>",
-               "<llvm-c/Transforms/IPO.h>", "<llvm-c/Transforms/PassManagerBuilder.h>", "<llvm-c/Transforms/Scalar.h>", "<llvm-c/Transforms/Utils.h>", "<llvm-c/Transforms/Vectorize.h>",
+               "<llvm-c/OrcEE.h>", "<llvm-c/LLJIT.h>", /*"<llvm-c/Transforms/AggressiveInstCombine.h>", "<llvm-c/Transforms/Coroutines.h>", "<llvm-c/Transforms/InstCombine.h>",
+               "<llvm-c/Transforms/IPO.h>", "<llvm-c/Transforms/PassManagerBuilder.h>", "<llvm-c/Transforms/Scalar.h>", "<llvm-c/Transforms/Utils.h>", "<llvm-c/Transforms/Vectorize.h>",*/
                "<llvm-c/Transforms/PassBuilder.h>", "<polly/LinkAllPasses.h>", "<FullOptimization.h>", "<NamedMetadataOperations.h>", "<TargetStubs.h>"},
-    compiler = "cpp17", link = {"LLVM-16", "LTO@.16", "Remarks@.16"}, resource = {"include", "lib", "libexec", "share"}),
+    compiler = "cpp17", link = {"LLVM-17-rc1", "LTO@.17-rc1", "Remarks@.17-rc1"}, resource = {"include", "lib", "libexec", "share"}),
         @Platform(value = "macosx", link = {"LLVM", "LTO", "Remarks"}),
         @Platform(value = "windows", link = {"LLVM", "LTO", "Remarks"})})
 @NoException

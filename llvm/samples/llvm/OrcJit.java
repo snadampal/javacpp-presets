@@ -57,7 +57,7 @@ public class OrcJit {
 
     public static void main(String[] args) {
         // Stage 1: Initialize LLVM components
-        LLVMInitializeCore(LLVMGetGlobalPassRegistry());
+//        LLVMInitializeCore(LLVMGetGlobalPassRegistry());
         LLVMInitializeNativeTarget();
         LLVMInitializeNativeAsmPrinter();
 
