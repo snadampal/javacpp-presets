@@ -87,7 +87,7 @@ case $PLATFORM in
         ;;
 esac
 
-"$CMAKE" $CMAKE_FLAGS -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=.. -DCMAKE_INSTALL_LIBDIR=lib ../tensorflow-$TENSORFLOW_VERSION/tensorflow/lite/c
+"$CMAKE" $CMAKE_FLAGS -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=.. -DCMAKE_INSTALL_LIBDIR=lib -DTFLITE_C_BUILD_SHARED_LIBS=OFF ../tensorflow-$TENSORFLOW_VERSION/tensorflow/lite/c
 "$CMAKE" --build . --parallel $MAKEJ
 #"$CMAKE" --install .
 
