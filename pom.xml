@@ -1167,7 +1167,7 @@
         </property>
       </activation>
       <modules>
-        <module>opencv</module>
+   <!-- <module>opencv</module>
         <module>ffmpeg</module>
         <module>flycapture</module>
         <module>libdc1394</module>
@@ -1202,7 +1202,7 @@
         <module>depthai</module>
         <module>onnxruntime</module>
         <module>cpu_features</module>
-        <module>systems</module>
+        <module>systems</module> -->
       </modules>
       <properties>
         <javacpp.platform.android-arm></javacpp.platform.android-arm>
